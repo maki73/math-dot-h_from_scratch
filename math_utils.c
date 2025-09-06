@@ -182,19 +182,3 @@ float newton_sqrt_f(const float x) {
 
 	return guess;
 }
-
-static inline int math_floor(const float x) {
-	int i = (int)x;
-	return (x < 0 && x != (float)i) ? (i - 1) : i;
-
-}
-
-static inline int math_ceil(const float x) {
-	int i = (int)x;
-	return (x > 0 && x != (float)i) ? (i + 1) : i;
-}
-
-static inline int math_mod(const int x, const int y) {
-	int r = x % y;
-	return (r < 0) ? (r + (y > 0 ? y : -y)) : r;
-}
